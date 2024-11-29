@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Projects - WebDev Academy</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="Projects/projects.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="script.js" defer></script>
+   <script src="Projects/projects.js" defer></script>
+</head>
+<body>
+   <nav>
+        <div class="logo">WebDev Academy</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="html-tutorial.html">HTML</a>
+            <a href="css-tutorial.html">CSS</a>
+            <a href="js-tutorial.html">JavaScript</a>
+            <a href="projects.html">Projects</a>
+            <a href="compiler.html">Code Editor</a>
+        </div>
+        </div>
+        <div class="nav-controls">
+            <div class="search-toggle">
+                <img src="https://cdn-icons-png.flaticon.com/512/428/428556.png" alt="Search">
+            </div>
+            <div class="menu-toggle">&#9776;</div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <div class="search-results"></div>
+        </div>
+        </nav>
+
+   <main>
+       <h1>Interactive Web Projects</h1>
+
+
+       <section>
+           <div class="demo-section">
+               <h2>Project 1: Change Text Color</h2>
+               <div class="demo">
+                   <p class="color-text">Click the button to change my color!</p>
+                   <button id="btn" class="color-btn">Change Color</button>
+               </div>
+           </div>
+
+           <div class="code-section">
+               <div class="code-container">
+                   <div class="code-block">
+                       <h3>HTML</h3>
+                       <pre><code>
+&lt;p class="color-text"&gt;
+   Click the button to change my color!
+&lt;/p&gt;
+&lt;button class="color-btn"&gt;
+   Change Color
+&lt;/button&gt;
+                       </code></pre>
+                   </div>
+
+                   <div class="code-block">
+                       <h3>CSS</h3>
+                       <pre><code>
+.color-text {
+   margin: 1rem 0;
+   font-size: 1.2rem;
+}
+
+button {
+   padding: 0.5rem 1rem;
+   background: #2563eb;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+                       </code></pre>
+                   </div>
+
+                   <div class="code-block">
+                       <h3>JavaScript</h3>
+                       <pre><code>
+let colors = ['red', 'blue', 'orange', 
+   'green', 'yellow', 'pink', 'purple'];
+
+document.querySelector('.color-btn')
+   .addEventListener('click', () => {
+       let colorText = document
+           .querySelector('.color-text');
+       let randomColor = colors[Math.floor(
+           Math.random() * colors.length)];
+       colorText.style.color = randomColor;
+   });
+                       </code></pre>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <section>
+           <div class="demo-section">
+               <h2>Project 2: Image Slider</h2>
+               <div class="slider-container">
+                   <img src="" height="180" width="300">
+                   <div class="slider-buttons">
+                       <button id="btn" class="prev-btn">Previous</button>
+                       <button id="btn" class="next-btn">Next</button>
+                   </div>
+               </div>
+           </div>
+
+           <div class="code-section">
+               <div class="code-container">
+                   <div class="code-block">
+                       <h3>HTML</h3>
+                       <pre><code>
+&lt;div class="slider-container"&gt;
+   &lt;img src="" height="180" width="300"&gt;
+   &lt;div class="slider-buttons"&gt;
+       &lt;button class="prev-btn"&gt;
+           Previous
+       &lt;/button&gt;
+       &lt;button class="next-btn"&gt;
+           Next
+       &lt;/button&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+                       </code></pre>
+                   </div>
+
+                   <div class="code-block">
+                       <h3>CSS</h3>
+                       <pre><code>
+.slider-container img {
+   height: 180px;
+   width: 300px;
+   display: block;
+   margin: 1rem auto;
+}
+
+.slider-buttons {
+   text-align: center;
+}
+                       </code></pre>
+                   </div>
+
+                   <div class="code-block">
+                       <h3>JavaScript</h3>
+                       <pre><code>
+let Images = [
+   'image1.jpg',
+   'image2.jpg',
+   'image3.jpg'
+];
+
+let currentIndex = 0;
+let imageSlider = document.querySelector(
+   '.slider-container img');
+imageSlider.src = Images[currentIndex];
+
+document.querySelector('.next-btn')
+   .addEventListener('click', () => {
+       currentIndex = 
+           (currentIndex + 1) % Images.length;
+       imageSlider.src = Images[currentIndex];
+   });
+
+document.querySelector('.prev-btn')
+   .addEventListener('click', () => {
+       currentIndex = (currentIndex - 1 + 
+           Images.length) % Images.length;
+       imageSlider.src = Images[currentIndex];
+   });
+                       </code></pre>
+                   </div>
+               </div>
+           </div>
+       </section>
+   </main>
+
+   <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>About WebDev Academy</h4>
+            <p>Empowering developers through interactive learning and hands-on coding experiences.</p>
+        </div>
+        
+        <div class="footer-section">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="html-tutorial.html">HTML Tutorial</a></li>
+                        <li><a href="css-tutorial.html">CSS Tutorial</a></li>
+                        <li><a href="js-tutorial.html">JavaScript Tutorial</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="compiler.html">Code Editor</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+                <li>Email: contact@webdevacademy.com</li>
+                <li>Support: help@webdevacademy.com</li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="GitHub"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X"></a>
+                <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2024 WebDev Academy. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>

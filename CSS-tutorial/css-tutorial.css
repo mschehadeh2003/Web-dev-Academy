@@ -1,0 +1,46 @@
+.tutorial-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tutorial-section {
+    margin-bottom: 2rem;
+}
+
+.code-example {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.demo-box {
+    width: 100px;
+    height: 100px;
+    background-color: #2563eb;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.flex-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.flex-item {
+    padding: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 4px;
+}
+
+.hover-demo:hover {
+    transform: scale(1.1);
+    background-color: #1e40af;
+}

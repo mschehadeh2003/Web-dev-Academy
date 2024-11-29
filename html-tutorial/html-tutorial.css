@@ -1,0 +1,25 @@
+.tutorial-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tutorial-section {
+    margin-bottom: 2rem;
+}
+
+.code-example {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.practice-exercise {
+    background-color: #e0f2fe;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial - WebDev Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="JS-tutorial/js-tutorial.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="JS-tutorial/js-tutorial.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">WebDev Academy</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="html-tutorial.html">HTML</a>
+            <a href="css-tutorial.html">CSS</a>
+            <a href="js-tutorial.html">JavaScript</a>
+            <a href="projects.html">Projects</a>
+            <a href="compiler.html">Code Editor</a>
+        </div>
+        </div>
+        <div class="nav-controls">
+            <div class="search-toggle">
+                <img src="https://cdn-icons-png.flaticon.com/512/428/428556.png" alt="Search">
+            </div>
+            <div class="menu-toggle">&#9776;</div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <div class="search-results"></div>
+        </div>
+        </nav>
+
+    <main class="tutorial-content">
+        <h1>JavaScript Tutorial</h1>
+        
+        <div class="tutorial-section">
+            <h2>Introduction to JavaScript</h2>
+            <p>JavaScript is a programming language that adds interactivity to your websites. Let's start with the basics!</p>
+            
+            <div class="code-example">
+// Variables and Data Types
+let name = "John";
+const age = 25;
+var isStudent = true;
+
+// Printing to console
+console.log("Hello, " + name);
+
+// Modern string interpolation
+console.log(`${name} is ${age} years old`);</div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>Working with the DOM</h2>
+            <p>The Document Object Model (DOM) allows JavaScript to interact with HTML elements.</p>
+            
+            <div class="interactive-demo">
+                <button onclick="changeText()" class="btn primary">Click Me!</button>
+                <p id="demo">This text will change when you click the button.</p>
+            </div>
+
+            <div class="code-example">
+// DOM Manipulation Example
+function changeText() {
+    document.getElementById("demo").innerHTML = "Text changed!";
+}</div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>jQuery Basics</h2>
+            <p>jQuery is a JavaScript library that makes it easier to work with the DOM.</p>
+
+            <div class="interactive-demo">
+                <button id="jqueryBtn" class="btn primary">jQuery Example</button>
+                <p id="jqueryDemo">This text will fade out and in.</p>
+            </div>
+
+            <div class="code-example">
+// jQuery Example
+$(document).ready(function() {
+    $("#jqueryBtn").click(function() {
+        $("#jqueryDemo").fadeOut().fadeIn();
+    });
+});</div>
+        </div>
+
+        <div class="tutorial-section">
+            <h2>Practice Exercise</h2>
+            <p>Try creating a simple counter application using JavaScript and jQuery!</p>
+            <div class="interactive-demo">
+                <p>Counter: <span id="counter">0</span></p>
+                <button id="incrementBtn" class="btn primary">Increment</button>
+                <button id="decrementBtn" class="btn secondary">Decrement</button>
+            </div>
+
+            <a href="compiler.html" class="btn primary">Try More in Code Editor</a>
+        </div>
+    </main>
+
+    
+   <footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>About WebDev Academy</h4>
+            <p>Empowering developers through interactive learning and hands-on coding experiences.</p>
+        </div>
+        
+        <div class="footer-section">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html-tutorial.html">HTML Tutorial</a></li>
+                    <li><a href="css-tutorial.html">CSS Tutorial</a></li>
+                    <li><a href="js-tutorial.html">JavaScript Tutorial</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="compiler.html">Code Editor</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <ul>
+                <li>Email: contact@webdevacademy.com</li>
+                <li>Support: help@webdevacademy.com</li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="GitHub"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X"></a>
+                <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        © 2024 WebDev Academy. All rights reserved.
+    </div>
+</footer>
+</body>
+</html>

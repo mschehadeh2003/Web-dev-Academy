@@ -1,0 +1,32 @@
+.tutorial-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.tutorial-section {
+    margin-bottom: 2rem;
+}
+
+.code-example {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.interactive-demo {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.output {
+    background-color: #e0f2fe;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
